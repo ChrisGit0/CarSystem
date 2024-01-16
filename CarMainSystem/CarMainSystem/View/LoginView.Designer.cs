@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgvUsers = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvUsers
+            // 
+            this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsers.Location = new System.Drawing.Point(57, 38);
+            this.dgvUsers.Name = "dgvUsers";
+            this.dgvUsers.Size = new System.Drawing.Size(643, 293);
+            this.dgvUsers.TabIndex = 0;            // 
+            // LoginView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvUsers);
+            this.Name = "LoginView";
             this.Text = "LoginView";
+            this.Load += new System.EventHandler(this.LoginView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvUsers;
     }
 }

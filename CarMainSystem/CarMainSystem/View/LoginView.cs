@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarMainSystem.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,15 @@ namespace CarMainSystem.View
 {
     public partial class LoginView : Form
     {
+        MainController mainController = new MainController();
         public LoginView()
         {
             InitializeComponent();
+        }
+
+        private void LoginView_Load(object sender, EventArgs e)
+        {
+            dgvUsers.DataSource = mainController.GetAllUsers();
         }
     }
 }
